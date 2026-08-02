@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Natural Glow Boutique — design tokens + global resets
+   Token values are lifted verbatim from the handoff README (§Design Tokens)
+   and the prototype ("Natural Glow Site.dc.html"). Everything is square-
+   cornered; the only shadow in the system is the add-to-cart toast.
+   ========================================================================== */
+
+:root {
+  /* ---- Fonts (bound by next/font in app/layout.jsx) --------------------- */
+  --ng-font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --ng-font-ui: var(--font-outfit), Outfit, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ---- Colors ---------------------------------------------------------- */
+  --ng-bg: #fbfaf7;              /* page background */
+  --ng-ink: #1c1b18;             /* primary ink / solid buttons */
+  --ng-ink-hover: #3a382f;       /* solid button hover */
+  --ng-muted: #8a867c;           /* muted text, eyebrows, subs */
+  --ng-body: #6d6a60;            /* body copy on cream (product) */
+  --ng-body-legal: #55524a;      /* body copy (legal pages) */
+  --ng-img-placeholder: #efece3; /* image box while loading */
+  --ng-band: #f3efe6;            /* tinted band (wellness) */
+  --ng-selected: #f5f2ea;        /* selected delivery option row */
+  --ng-error: #9c4a30;           /* validation error border/text */
+  --ng-faint: #b0ac9f;           /* FDA disclaimer / faintest text */
+  --ng-placeholder: #b8b4a8;     /* input placeholder */
+
+  /* ---- Hairlines ------------------------------------------------------- */
+  --ng-rule: rgba(28, 27, 24, 0.12);         /* structural borders */
+  --ng-rule-soft: rgba(28, 27, 24, 0.08);    /* footer bottom bar */
+  --ng-rule-toast: rgba(28, 27, 24, 0.18);   /* toast border */
+  --ng-rule-option: rgba(28, 27, 24, 0.22);  /* unselected option rows */
+  --ng-rule-crumb: rgba(28, 27, 24, 0.25);   /* breadcrumb underline */
+  --ng-rule-input: rgba(28, 27, 24, 0.28);   /* inputs, qty steppers */
+  --ng-rule-link: rgba(28, 27, 24, 0.3);     /* underlined text link */
+  --ng-rule-link-strong: rgba(28, 27, 24, 0.35); /* inline consent links */
+
+  /* ---- Display type scale (Cormorant Garamond) ------------------------- */
+  --ng-d-60: 60px;   /* home H1 */
+  --ng-d-44: 44px;   /* product name, confirmation */
+  --ng-d-42: 42px;   /* legal title, wellness band */
+  --ng-d-38: 38px;   /* shop title, cart title */
+  --ng-d-36: 36px;   /* checkout title */
+  --ng-d-31: 31px;   /* bestsellers heading */
+  --ng-d-30: 30px;   /* story pull-quote (italic) */
+  --ng-d-26: 26px;   /* "You may also like" */
+  --ng-d-22: 22px;   /* header logo */
+  --ng-d-21: 21px;   /* legal section headings */
+  --ng-d-20: 20px;   /* shop card name, cart empty state */
+  --ng-d-19: 19px;   /* bestseller card name, cart line name */
+  --ng-d-18: 18px;   /* footer logo, product tagline */
+  --ng-d-17: 17px;   /* key actives line */
+  --ng-d-16: 16px;   /* toast product name */
+  --ng-d-155: 15.5px;/* checkout summary line name */
+
+  /* ---- UI type scale (Outfit) ------------------------------------------ */
+  --ng-t-145: 14.5px; /* hero sub */
+  --ng-t-14: 14px;    /* product description, band sub */
+  --ng-t-135: 13.5px; /* legal body, cart line total */
+  --ng-t-13: 13px;    /* inputs, accordion body, story sub */
+  --ng-t-125: 12.5px; /* card price, confirmation sub */
+  --ng-t-12: 12px;    /* footer links, consent copy */
+  --ng-t-115: 11.5px; /* shop count, "Last updated" */
+  --ng-t-11: 11px;    /* nav, cart link, card sub */
+  --ng-t-105: 10.5px; /* buttons, value strip, filters */
+  --ng-t-10: 10px;    /* breadcrumb, ADD, FDA line */
+  --ng-t-95: 9.5px;   /* section + column labels */
+  --ng-t-9: 9px;      /* toast eyebrow */
+  --ng-t-8: 8px;      /* "BOUTIQUE" lockup line */
+
+  /* ---- Letter-spacing -------------------------------------------------- */
+  --ng-ls-lockup: 0.3em;   /* NATURAL GLOW (header) */
+  --ng-ls-lockup-sm: 0.28em; /* NATURAL GLOW (footer) */
+  --ng-ls-boutique: 0.52em;  /* BOUTIQUE (header) */
+  --ng-ls-boutique-sm: 0.5em;/* BOUTIQUE (footer) */
+  --ng-ls-eyebrow: 0.24em; /* eyebrows, column labels */
+  --ng-ls-eyebrow-lg: 0.28em;
+  --ng-ls-legal: 0.26em;   /* LEGAL eyebrow */
+  --ng-ls-toast: 0.22em;   /* toast eyebrow, KEY INGREDIENTS */
+  --ng-ls-announce: 0.22em;/* announcement bar */
+  --ng-ls-secure: 0.2em;   /* SECURE CHECKOUT */
+  --ng-ls-btn: 0.18em;     /* buttons, filter tabs */
+  --ng-ls-nav: 0.16em;     /* nav, ADD, accordion labels */
+  --ng-ls-toast-link: 0.14em; /* VIEW CART */
+  --ng-ls-mail: 0.08em;    /* footer mailto */
+
+  /* ---- Spacing --------------------------------------------------------- */
+  --ng-gutter: 48px;       /* page gutter */
+  --ng-gap-card: 28px;     /* bestseller grid gap */
+  --ng-gap-grid: 32px;     /* shop grid gap */
+  --ng-gap-footer: 40px;   /* footer column gap */
+  --ng-gap-checkout: 64px; /* checkout column gap */
+
+  /* ---- Layout maxima --------------------------------------------------- */
+  --ng-max-legal: 680px;
+  --ng-max-cart: 720px;
+  --ng-max-confirm: 620px;
+  --ng-max-checkout: 1080px;
+
+  /* ---- Shadows / radius ------------------------------------------------ */
+  --ng-shadow-toast: 0 12px 36px rgba(28, 27, 24, 0.16);
+  /* Square corners everywhere. The one exception in the whole design is the
+     checkout delivery radio dot (border-radius 50%), which sets its own
+     inline style — inline wins over the `*` rule below. */
+  --ng-radius: 0;
+}
+
+/* ---- Reset / base ------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: var(--ng-radius);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ng-bg);
+  color: var(--ng-ink);
+  font-family: var(--ng-font-ui);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--ng-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--ng-font-ui);
+  color: var(--ng-ink);
+  background: transparent;
+  border-radius: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ng-placeholder);
+}
+
+/* ---- Shared interaction utilities -------------------------------------
+   Inline styles can't express :hover, so the handful of hover states in the
+   system live here as classes. WS-B / WS-C should reuse these rather than
+   re-declaring hover rules.
+   ---------------------------------------------------------------------- */
+
+/* Primary button: solid ink, cream label. */
+.ng-btn {
+  background: var(--ng-ink);
+  color: var(--ng-bg);
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.18s ease;
+}
+.ng-btn:hover {
+  background: var(--ng-ink-hover);
+  opacity: 1;
+}
+
+/* Secondary button: 1px outline, inverts on hover. */
+.ng-btn-outline {
+  border: 1px solid var(--ng-ink);
+  color: var(--ng-ink);
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.ng-btn-outline:hover {
+  background: var(--ng-ink);
+  color: var(--ng-bg);
+  opacity: 1;
+}
+
+/* Tertiary: uppercase micro-label with a 1px bottom rule. */
+.ng-link-underline {
+  border-bottom: 1px solid var(--ng-ink);
+  padding-bottom: 3px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Anything that just dims on hover (footer links, nav, cards). */
+.ng-hover:hover {
+  opacity: 0.7;
+}
+
+/* Toast dismiss glyph — muted, darkens on hover. */
+.ng-toast-close:hover {
+  color: var(--ng-ink);
+}
+
+/* Toast entrance — slide down + fade, .3s ease. */
+@keyframes ng-toast {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
