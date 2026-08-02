@@ -13,7 +13,7 @@ import { bestsellers } from '@/lib/products';
 const VALUE_CELLS = [
   'COLD-PRESSED BOTANICALS',
   'SMALL-BATCH, MADE MONTHLY',
-  'PLASTIC-FREE PACKAGING',
+  'FREE SHIPPING ON EVERY ORDER',
 ];
 
 export default function HomePage() {
