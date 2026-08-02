@@ -11,7 +11,7 @@ import { useCart } from '@/lib/cart';
 
 const NAV = [
   { label: 'SHOP', href: '/shop' },
-  { label: 'WELLNESS', href: '/shop?category=wellness' },
+  { label: 'BODY', href: '/shop?category=body' },
   { label: 'HOME FRAGRANCE', href: '/shop?category=home' },
 ];
 

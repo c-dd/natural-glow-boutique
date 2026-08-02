@@ -7,7 +7,6 @@
 
 import {
   LegalBody,
-  LegalFootnote,
   LegalHeading,
   LegalPage,
   LegalStrong,
@@ -36,10 +35,7 @@ export default function TermsPage() {
         scent may vary slightly between batches. Full ingredient lists are
         published on each product page — please review them carefully before use
         if you have allergies or sensitivities, and discontinue use if
-        irritation occurs. Our wellness products are dietary supplements, not
-        medicine: they are not a substitute for professional medical advice, and
-        you should consult your healthcare practitioner before use if you are
-        pregnant, nursing, taking medication, or have a medical condition.†
+        irritation occurs.
       </LegalBody>
 
       <LegalHeading>3. Pricing &amp; Payment</LegalHeading>
@@ -118,12 +114,6 @@ export default function TermsPage() {
         applies to your order. Questions? Write to us at
         hello@naturalglowboutique.com.
       </LegalBody>
-
-      <LegalFootnote>
-        †These statements have not been evaluated by the Food and Drug
-        Administration. Our wellness products are not intended to diagnose,
-        treat, cure, or prevent any disease.
-      </LegalFootnote>
     </LegalPage>
   );
 }

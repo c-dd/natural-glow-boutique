@@ -24,7 +24,7 @@ const outfit = Outfit({
 export const metadata = {
   title: 'Natural Glow Boutique',
   description:
-    'Small-batch botanical skincare, body care, wellness, and home fragrance — cold-pressed, blended by hand, and kind to skin.',
+    'Small-batch botanical skincare, body care, and home fragrance — cold-pressed, blended by hand, and kind to skin.',
 };
 
 export const viewport = {

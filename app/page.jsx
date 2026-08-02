@@ -1,9 +1,9 @@
 /**
  * Home (handoff README §Home, prototype screen "Home").
  *
- * Five sections, top to bottom: hero · value strip · bestsellers · wellness
- * band · story. A server component — the only interactive part is the card's
- * quick-ADD, which lives in the client <ProductCard>.
+ * Four sections, top to bottom: hero · value strip · bestsellers · story.
+ * A server component — the only interactive part is the card's quick-ADD,
+ * which lives in the client <ProductCard>.
  */
 
 import Link from 'next/link';
@@ -89,14 +89,14 @@ export default function HomePage() {
               SHOP THE COLLECTION
             </Link>
             <Link
-              href="/shop?category=wellness"
+              href="/shop?category=body"
               className="ng-link-underline"
               style={{
                 fontSize: 'var(--ng-t-11)',
                 letterSpacing: 'var(--ng-ls-nav)',
               }}
             >
-              SHOP WELLNESS
+              SHOP BODY
             </Link>
           </div>
         </div>
@@ -184,89 +184,6 @@ export default function HomePage() {
           {bestsellers.map((product) => (
             <ProductCard key={product.id} product={product} variant="home" />
           ))}
-        </div>
-      </section>
-
-      {/* ── Wellness band ────────────────────────────────────────────────── */}
-      <section
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          background: 'var(--ng-band)',
-          borderTop: '1px solid var(--ng-rule)',
-          borderBottom: '1px solid var(--ng-rule)',
-        }}
-      >
-        <div style={{ overflow: 'hidden', minHeight: 480 }}>
-          <img
-            src="/products/womens-wellness.png"
-            alt="Women's Wellness supplement"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block',
-            }}
-          />
-        </div>
-
-        <div
-          style={{
-            padding: '80px 72px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            gap: 22,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 'var(--ng-t-105)',
-              letterSpacing: 'var(--ng-ls-eyebrow)',
-              color: 'var(--ng-muted)',
-              fontWeight: 500,
-            }}
-          >
-            NEW — THE WELLNESS SHELF
-          </div>
-          <h2
-            style={{
-              fontFamily: 'var(--ng-font-display)',
-              fontSize: 'var(--ng-d-42)',
-              lineHeight: 1.15,
-              fontWeight: 500,
-              textWrap: 'pretty',
-              margin: 0,
-            }}
-          >
-            Glow, from within.
-          </h2>
-          <p
-            style={{
-              fontSize: 'var(--ng-t-14)',
-              lineHeight: 1.75,
-              color: 'var(--ng-muted)',
-              fontWeight: 300,
-              maxWidth: 400,
-              margin: 0,
-            }}
-          >
-            Daily botanical supplements to support energy, balance, and stronger
-            hair, skin, and nails — one capsule at a time.&#8224;
-          </p>
-          <Link
-            href="/shop?category=wellness"
-            className="ng-btn-outline"
-            style={{
-              alignSelf: 'flex-start',
-              padding: '14px 32px',
-              fontSize: 'var(--ng-t-105)',
-              letterSpacing: 'var(--ng-ls-btn)',
-              fontWeight: 500,
-            }}
-          >
-            SHOP WELLNESS
-          </Link>
         </div>
       </section>
 

@@ -16,7 +16,6 @@ const COLUMNS = [
       { label: 'Shop All', href: '/shop' },
       { label: 'Face', href: '/shop?category=face' },
       { label: 'Body', href: '/shop?category=body' },
-      { label: 'Wellness', href: '/shop?category=wellness' },
       { label: 'Home Fragrance', href: '/shop?category=home' },
     ],
   },
@@ -128,20 +127,6 @@ export default function Footer() {
           }}
         >
           © 2026 Natural Glow Boutique · naturalglowboutique.com
-        </div>
-        <div
-          style={{
-            fontSize: 'var(--ng-t-10)',
-            lineHeight: 1.7,
-            color: 'var(--ng-faint)',
-            fontWeight: 300,
-            marginTop: 8,
-            maxWidth: 640,
-          }}
-        >
-          †These statements have not been evaluated by the Food and Drug
-          Administration. Our wellness products are not intended to diagnose,
-          treat, cure, or prevent any disease.
         </div>
       </div>
     </footer>
